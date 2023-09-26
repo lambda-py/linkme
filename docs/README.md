@@ -5,7 +5,7 @@ Social Media Dashboard that allows users to link multiple social media accounts 
 
 
 - [Overall Architecture](./architecture/Overall-Architecture.md)
-- [User Service](./architecture/User-Service.md)
+- [Auth Service](./architecture/Auth-Service.md)
 - [Analytics Service](./architecture/Analytics-Service.md)
 - [Dashboard](./architecture/Dashboard.md)
 - [Infrastructure](./architecture/Infrastructure.md)
