@@ -2,6 +2,9 @@
 An all-in-one dashboard to manage and analyze your social media activities.
 
 ## 🚀 Introduction
+
+[Project Overview](./docs/README.md)
+
 LinkMe is designed to simplify social media management by providing a unified interface for tracking, analyzing, and interacting across multiple social media platforms. Built with FastAPI, ReactJS, and AWS, this project is an educational initiative aimed at providing real-world experience in full-stack development.
 
 ## 💡 Features
@@ -25,7 +28,7 @@ git clone https://github.com/acman/linkme.git
 For complete setup, please refer to individual service READMEs and the /docs directory.
 
 ## 🏗️ Architecture
-The project follows a microservices architecture pattern, employing FastAPI for backend services and ReactJS for the frontend. All services are containerized using Docker and orchestrated via AWS services. For a detailed explanation, please refer to the [architecture documentation](/docs/architecture).
+The project follows a microservices architecture pattern, employing FastAPI for backend services and ReactJS for the frontend. All services are containerized using Docker and orchestrated via AWS services. For a detailed explanation, please refer to the [architecture documentation](./docs/architecture/Overall-Architecture.md).
 
 ## 🤝 Contributing
 Please read our Contributing Guidelines for details on how to contribute to this project.

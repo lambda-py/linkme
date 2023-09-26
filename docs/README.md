@@ -3,6 +3,19 @@
 Objective: 
 Social Media Dashboard that allows users to link multiple social media accounts and view aggregated insights like posts, mentions, and follower counts.
 
+
+- [Overall Architecture](./architecture/Overall-Architecture.md)
+- [User Service](./architecture/User-Service.md)
+- [Analytics Service](./architecture/Analytics-Service.md)
+- [Dashboard](./architecture/Dashboard.md)
+- [Infrastructure](./architecture/Infrastructure.md)
+- [CI/CD](./architecture/CI-CD.md)
+- [Monitoring and Analytics](./architecture/Monitoring-and-Analytics.md)
+- [Testing](./architecture/Testing.md)
+- [Documentation](./architecture/Documentation.md)
+
+
+
 ### Components:
 
 1. Backend Microservices
