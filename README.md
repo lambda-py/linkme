@@ -25,7 +25,7 @@ git clone https://github.com/acman/linkme.git
 For complete setup, please refer to individual service READMEs and the /docs directory.
 
 ## 🏗️ Architecture
-The project follows a microservices architecture pattern, employing FastAPI for backend services and ReactJS for the frontend. All services are containerized using Docker and orchestrated via AWS services. For a detailed explanation, please refer to the /docs/architecture directory.
+The project follows a microservices architecture pattern, employing FastAPI for backend services and ReactJS for the frontend. All services are containerized using Docker and orchestrated via AWS services. For a detailed explanation, please refer to the [architecture documentation](/docs/architecture).
 
 ## 🤝 Contributing
 Please read our Contributing Guidelines for details on how to contribute to this project.
