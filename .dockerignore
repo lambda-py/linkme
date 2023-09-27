@@ -1,0 +1,38 @@
+# Version control
+.git
+.gitignore
+.gitattributes
+
+# Environment and config files
+.env
+*.log
+*.pyc
+*.pyo
+__pycache__/
+*.egg-info/
+dist/
+build/
+
+# Development tools
+*.idea/
+.vscode/
+
+# Node (Frontend)
+node_modules/
+npm-debug.log
+
+# Python
+*.pyc
+__pycache__/
+*.egg-info
+*.egg
+*.log
+*.sql
+*.sqlite
+
+# Editor backups and temporary files
+*.bak
+*.swp
+*.swo
+*.tmp
+*.DS_Store
