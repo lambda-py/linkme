@@ -13,7 +13,6 @@ Social Media Dashboard that allows users to link multiple social media accounts 
 - [CI/CD](./architecture/CI-CD.md)
 - [Monitoring and Analytics](./architecture/Monitoring-and-Analytics.md)
 - [Testing](./architecture/Testing.md)
-- [Documentation](./architecture/Documentation.md)
 
 
 
