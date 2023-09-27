@@ -20,12 +20,8 @@ Profile: Get access to all social media accounts in one place.
 * New Relic
 * More...
 ## ⚙️ Quick Start
-```bash
-# Clone the repository
-git clone https://github.com/acman/linkme.git
-```
 
-For complete setup, please refer to individual service READMEs and the /docs directory.
+[Local Development Setup](./docs/setup/Local-Development.md)
 
 ## 🏗️ Architecture
 The project follows a microservices architecture pattern, employing FastAPI for backend services and ReactJS for the frontend. All services are containerized using Docker and orchestrated via AWS services. For a detailed explanation, please refer to the [architecture documentation](./docs/architecture/Overall-Architecture.md).

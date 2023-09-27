@@ -1,0 +1,52 @@
+version: '3'
+
+services:
+  db:
+    image: postgres:latest
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    environment:
+      POSTGRES_DB: ${POSTGRES_DB}
+      POSTGRES_USER: ${POSTGRES_USER}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
+
+  auth_service:
+    build:
+      context: ./auth_service
+      dockerfile: Dockerfile.auth_service
+    ports:
+      - "8001:8001"
+    volumes:
+      - ./auth_service:/app
+    environment:
+      DATABASE_URL: ${DATABASE_URL}
+    depends_on:
+      - db
+
+  profile_service:
+    build:
+      context: ./profile_service
+      dockerfile: Dockerfile.profile_service
+    ports:
+      - "8002:8002"
+    volumes:
+      - ./profile_service:/app
+    environment:
+      DATABASE_URL: ${DATABASE_URL}
+    depends_on:
+      - db
+
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile.frontend
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./frontend:/app
+    environment:
+      REACT_APP_AUTH_SERVICE_URL: ${REACT_APP_AUTH_SERVICE_URL}
+      REACT_APP_PROFILE_SERVICE_URL: ${REACT_APP_PROFILE_SERVICE_URL}
+
+volumes:
+  postgres_data:
