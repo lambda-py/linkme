@@ -8,9 +8,9 @@ An all-in-one dashboard to manage and analyze your social media activities.
 LinkMe is designed to simplify social media management by providing a unified interface for tracking, analyzing, and interacting across multiple social media platforms. Built with FastAPI, ReactJS, and AWS, this project is an educational initiative aimed at providing real-world experience in full-stack development.
 
 ## 💡 Features
-User Authentication: Secure OAuth-based user authentication.
-Real-Time Analytics: Get real-time insights into your social media accounts.
-Multi-Platform Support: Integrate multiple social media platforms like Twitter, Instagram, and LinkedIn.
+User Authentication: Secure OAuth-based user authentication.  
+Profile: Get access to all social media accounts in one place.
+
 ## 🛠️ Technologies Used
 * FastAPI
 * ReactJS
@@ -35,3 +35,7 @@ Please read our Contributing Guidelines for details on how to contribute to this
 
 ## 📄 License
 This project is licensed under the MIT License - see the LICENSE.md file for details.
+
+## 📝 To-Do
+- [ ] Real-Time Analytics: Get real-time insights into your social media accounts.  
+- [ ] Multi-Platform Support: Integrate multiple social media platforms like Twitter, Instagram, and LinkedIn.
