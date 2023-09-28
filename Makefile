@@ -28,19 +28,19 @@ install:
 
 .PHONY: backend-test
 backend-test:
-	$(POETRY) run pytest
+	$(POETRY) run pytest --junitxml=tests/test_results.xml
 
 .PHONY: frontend-install
 frontend-install:
-	cd frontend && npm install
+	cd web_client && npm install
 
 .PHONY: frontend-build
 frontend-build:
-	cd frontend && npm run build
+	cd web_client && npm run build
 
 .PHONY: frontend-test
 frontend-test:
-	cd frontend && npm run test
+	cd web_client && npm run test
 
 .PHONY: clean
 clean:
