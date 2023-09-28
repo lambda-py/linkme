@@ -6,6 +6,10 @@ POETRY = poetry
 .PHONY: all
 all: build
 
+.PHONY: precommit
+precommit:
+	poetry run pre-commit install
+
 .PHONY: build
 build:
 	$(DOCKER_COMPOSE) build
@@ -18,8 +22,8 @@ up:
 down:
 	$(DOCKER_COMPOSE) down
 
-.PHONY: backend-install
-backend-install:
+.PHONY: install
+install:
 	$(POETRY) install
 
 .PHONY: backend-test

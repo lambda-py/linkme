@@ -57,3 +57,23 @@ docker-compose run auth_service pytest
 * View logs using `docker-compose logs [service_name]`.
 * Set up volumes in `docker-compose.yml` for data persistence.
 * Ensure `.env` is updated for local configurations.
+
+## Before committing
+
+1. Install dependencies:
+
+```
+make install
+```
+
+2. Create precommit hook:
+
+```
+make precommit
+```
+
+3. Format code:
+
+```
+make autofmt
+```
