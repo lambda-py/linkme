@@ -13,7 +13,7 @@ services:
   auth_service:
     build:
       context: ./auth_service
-      dockerfile: Dockerfile.auth_service
+      dockerfile: Dockerfile
     ports:
       - "8001:8001"
     volumes:
@@ -26,7 +26,7 @@ services:
   profile_service:
     build:
       context: ./profile_service
-      dockerfile: Dockerfile.profile_service
+      dockerfile: Dockerfile
     ports:
       - "8002:8002"
     volumes:
@@ -38,12 +38,12 @@ services:
 
   frontend:
     build:
-      context: ./frontend
-      dockerfile: Dockerfile.frontend
+      context: ./web_client
+      dockerfile: Dockerfile
     ports:
       - "3000:3000"
     volumes:
-      - ./frontend:/app
+      - ./web_client:/app
     environment:
       REACT_APP_AUTH_SERVICE_URL: ${REACT_APP_AUTH_SERVICE_URL}
       REACT_APP_PROFILE_SERVICE_URL: ${REACT_APP_PROFILE_SERVICE_URL}
