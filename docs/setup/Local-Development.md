@@ -72,7 +72,7 @@ make install
 make precommit
 ```
 
-3. Format code:
+3. Format code before every commit:
 
 ```
 make autofmt
