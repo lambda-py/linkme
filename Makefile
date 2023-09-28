@@ -66,7 +66,7 @@ pyformatcheck: isortcheck blackcheck
 
 .PHONY: poetrycheck
 poetrycheck:
-	poetry lock --check
+	poetry check --lock
 
 .PHONY: lint
 lint: poetrycheck pyformatcheck
