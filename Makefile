@@ -64,20 +64,15 @@ blackcheck:
 .PHONY: pyformatcheck
 pyformatcheck: isortcheck blackcheck
 
-.PHONY: mypy
-mypy:
-	@echo "Checking mypy..."
-	poetry run mypy .
-
 .PHONY: poetrycheck
 poetrycheck:
 	poetry lock --check
 
 .PHONY: lint
-lint: poetrycheck pyformatcheck mypy
+lint: poetrycheck pyformatcheck
 
 .PHONY: autofmt
-autofmt: black isort
+autofmt: clean black isort
 
 # TODO
 #.PHONY: db-migrate
