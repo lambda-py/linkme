@@ -17,7 +17,7 @@ services:
     ports:
       - "8001:8001"
     volumes:
-      - ./auth_service:/app
+      - ./auth_service/src:/app/auth_service
     environment:
       DATABASE_URL: ${DATABASE_URL}
     depends_on:
@@ -30,7 +30,7 @@ services:
     ports:
       - "8002:8002"
     volumes:
-      - ./profile_service:/app
+      - ./profile_service/src:/app/profile_service
     environment:
       DATABASE_URL: ${DATABASE_URL}
     depends_on:

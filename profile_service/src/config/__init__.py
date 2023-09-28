@@ -1,3 +1,5 @@
-from config.settings import Settings
+from profile_service.config.settings import Settings
 
-get_settings = Settings()
+
+def get_settings() -> Settings:
+    return Settings()

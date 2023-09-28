@@ -1,6 +1,6 @@
-from pydentic import BaseSettings
+from pydantic_settings import BaseSettings
 
 
 class Settings(BaseSettings):
-    service: str = "profile_service"
-    version: str = "0.1.0"
+    service_name: str = "profile_service"
+    api_version: str = "0.1.0"

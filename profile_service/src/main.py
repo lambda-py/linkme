@@ -1,20 +1,14 @@
-from config import get_settings
 from fastapi import FastAPI
+
+from profile_service.config import get_settings
 
 settings = get_settings()
 
 
 def create_application() -> FastAPI:
     application = FastAPI(
-        title=settings.service,
+        title=settings.service_name,
         version=settings.api_version,
     )
 
     return application
-
-
-if __name__ == "__main__":
-    app = create_application()
-    import uvicorn
-
-    uvicorn.run("main:app", host="0.0.0.0", port=8001, reload=True)
