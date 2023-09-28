@@ -12,8 +12,8 @@ services:
 
   auth_service:
     build:
-      context: ./auth_service
-      dockerfile: Dockerfile
+      context: .
+      dockerfile: auth_service/Dockerfile
     ports:
       - "8001:8001"
     volumes:
@@ -25,8 +25,8 @@ services:
 
   profile_service:
     build:
-      context: ./profile_service
-      dockerfile: Dockerfile
+      context: .
+      dockerfile: profile_service/Dockerfile
     ports:
       - "8002:8002"
     volumes:

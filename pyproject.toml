@@ -1,5 +1,5 @@
 [tool.poetry]
-name = "shared"
+name = "linkme"
 version = "0.1.0"
 description = ""
 authors = ["Vitalii Hrebennikov <webasman@gmail.com>"]
@@ -14,6 +14,8 @@ alembic = "^1.12.0"
 uvicorn = "^0.23.2"
 loguru = "^0.7.2"
 pytest = "^7.4.2"
+# TODO linkme/shared for shared does not seem to be a Python package
+#shared = { path = "./shared/" }
 
 
 [tool.poetry.group.dev.dependencies]

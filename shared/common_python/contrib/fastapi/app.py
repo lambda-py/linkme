@@ -1,7 +1,7 @@
 from fastapi import FastAPI
 
 
-class SharedFastAPI(FastApi):
+class SharedFastAPI(FastAPI):
     """
     A FastAPI application that can be used by multiple services.
 
