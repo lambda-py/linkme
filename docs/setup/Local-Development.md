@@ -60,6 +60,8 @@ docker-compose run auth_service pytest
 
 ## Before committing
 
+1. Install poetry [off docs](https://python-poetry.org/docs/#installation)
+
 1. Install dependencies:
 
 ```
