@@ -24,6 +24,153 @@ Resources:
           Properties:
             Path: /profile
             Method: get
+      Environment:
+        Variables:
+          TABLE_NAME: !Ref UserSocialProfile
+  GetProfileFunctionRole:
+    Type: AWS::IAM::Role
+    Properties:
+      AssumeRolePolicyDocument:
+        Version: '2012-10-17'
+        Statement:
+          - Effect: Allow
+            Principal:
+              Service:
+                - lambda.amazonaws.com
+            Action:
+              - sts:AssumeRole
+      Policies:
+        - PolicyName: root
+          PolicyDocument:
+            Version: '2012-10-17'
+            Statement:
+              - Effect: Allow
+                Action:
+                  - dynamodb:Query
+                  - dynamodb:Scan
+                  - dynamodb:GetItem
+                Resource: "*"
+  CreateProfileFunction:
+    Type: AWS::Serverless::Function
+    Properties:
+      CodeUri: lambda_handlers/
+      Handler: create_profile.handler
+      Runtime: python3.9
+      Events:
+        CreateProfile:
+          Type: Api
+          Properties:
+            Path: /profile
+            Method: post
+      Environment:
+        Variables:
+          TABLE_NAME: !Ref UserSocialProfile
+  CreateProfileFunctionRole:
+    Type: AWS::IAM::Role
+    Properties:
+      AssumeRolePolicyDocument:
+        Version: '2012-10-17'
+        Statement:
+          - Effect: Allow
+            Principal:
+              Service:
+                - lambda.amazonaws.com
+            Action:
+              - sts:AssumeRole
+      Policies:
+        - PolicyName: root
+          PolicyDocument:
+            Version: '2012-10-17'
+            Statement:
+              - Effect: Allow
+                Action:
+                  - dynamodb:PutItem
+                Resource: "*"
+  UpdateProfileFunction:
+    Type: AWS::Serverless::Function
+    Properties:
+      CodeUri: lambda_handlers/
+      Handler: update_profile.handler
+      Runtime: python3.9
+      Events:
+        UpdateProfile:
+          Type: Api
+          Properties:
+            Path: /profile
+            Method: put
+      Environment:
+        Variables:
+          TABLE_NAME: !Ref UserSocialProfile
+  UpdateProfileFunctionRole:
+    Type: AWS::IAM::Role
+    Properties:
+      AssumeRolePolicyDocument:
+        Version: '2012-10-17'
+        Statement:
+          - Effect: Allow
+            Principal:
+              Service:
+                - lambda.amazonaws.com
+            Action:
+              - sts:AssumeRole
+      Policies:
+        - PolicyName: root
+          PolicyDocument:
+            Version: '2012-10-17'
+            Statement:
+              - Effect: Allow
+                Action:
+                  - dynamodb:PutItem
+                Resource: "*"
+  DeleteProfileFunction:
+    Type: AWS::Serverless::Function
+    Properties:
+      CodeUri: lambda_handlers/
+      Handler: delete_profile.handler
+      Runtime: python3.9
+      Events:
+        DeleteProfile:
+          Type: Api
+          Properties:
+            Path: /profile
+            Method: delete
+      Environment:
+        Variables:
+          TABLE_NAME: !Ref UserSocialProfile
+  DeleteProfileFunctionRole:
+    Type: AWS::IAM::Role
+    Properties:
+      AssumeRolePolicyDocument:
+        Version: '2012-10-17'
+        Statement:
+          - Effect: Allow
+            Principal:
+              Service:
+                - lambda.amazonaws.com
+            Action:
+              - sts:AssumeRole
+      Policies:
+        - PolicyName: root
+          PolicyDocument:
+            Version: '2012-10-17'
+            Statement:
+              - Effect: Allow
+                Action:
+                  - dynamodb:DeleteItem
+                Resource: "*"
+  UserSocialProfile:
+    Type: AWS::DynamoDB::Table
+    Properties:
+      TableName: UserSocialProfile
+      AttributeDefinitions:
+        - AttributeName: user_id
+          AttributeType: S
+      KeySchema:
+        - AttributeName: user_id
+          KeyType: HASH
+      ProvisionedThroughput:
+        ReadCapacityUnits: 1
+        WriteCapacityUnits: 1
 
 Outputs:
   # ServerlessRestApi is an implicit API created out of Events key under Serverless::Function
@@ -38,3 +185,30 @@ Outputs:
   GetProfileFunctionIamRole:
     Description: "Implicit IAM Role created for GetProfile function"
     Value: !GetAtt GetProfileFunctionRole.Arn
+  CreateProfileApi:
+    Description: "API Gateway endpoint URL for Prod stage for CreateProfile function"
+    Value: !Sub "https://${ServerlessRestApi}.execute-api.${AWS::Region}.amazonaws.com/Prod/profile/"
+  CreateProfileFunction:
+    Description: "CreateProfile Lambda Function ARN"
+    Value: !GetAtt CreateProfileFunction.Arn
+  CreateProfileFunctionIamRole:
+    Description: "Implicit IAM Role created for CreateProfile function"
+    Value: !GetAtt CreateProfileFunctionRole.Arn
+  UpdateProfileApi:
+    Description: "API Gateway endpoint URL for Prod stage for UpdateProfile function"
+    Value: !Sub "https://${ServerlessRestApi}.execute-api.${AWS::Region}.amazonaws.com/Prod/profile/"
+  UpdateProfileFunction:
+    Description: "UpdateProfile Lambda Function ARN"
+    Value: !GetAtt UpdateProfileFunction.Arn
+  UpdateProfileFunctionIamRole:
+    Description: "Implicit IAM Role created for UpdateProfile function"
+    Value: !GetAtt UpdateProfileFunctionRole.Arn
+  DeleteProfileApi:
+    Description: "API Gateway endpoint URL for Prod stage for DeleteProfile function"
+    Value: !Sub "https://${ServerlessRestApi}.execute-api.${AWS::Region}.amazonaws.com/Prod/profile/"
+  DeleteProfileFunction:
+    Description: "DeleteProfile Lambda Function ARN"
+    Value: !GetAtt DeleteProfileFunction.Arn
+  DeleteProfileFunctionIamRole:
+    Description: "Implicit IAM Role created for DeleteProfile function"
+    Value: !GetAtt DeleteProfileFunctionRole.Arn
