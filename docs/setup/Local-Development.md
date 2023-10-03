@@ -1,6 +1,6 @@
 # Local Development Setup
 
-## Backend
+## Backend FastAPI
 
 ### Step-by-Step Setup:
 
@@ -39,8 +39,6 @@ docker compose up auth_service
 5. **Accessing the Services**:
 
 * Auth Service: http://localhost:8001
-* Profile Service: http://localhost:8002
-* Frontend: http://localhost:3000
 
 6. **Stopping Services**:
 
@@ -59,6 +57,33 @@ docker-compose run auth_service pytest
 * View logs using `docker-compose logs [service_name]`.
 * Set up volumes in `docker-compose.yml` for data persistence.
 * Ensure `.env` is updated for local configurations.
+
+## Backend Lambda
+
+1. Install [AWS SAM CLI](https://docs.aws.amazon.com/serverless-application-model/latest/developerguide/serverless-sam-cli-install.html)
+2. Go to service with lambdas
+
+```
+cd profile_service
+```
+
+3. Build
+
+```
+sam build
+```
+
+4. Run locally
+
+```
+sam local start-api
+```
+
+Test single lambda
+
+```
+sam local invoke <lambda_name>
+```
 
 ## Before committing
 
