@@ -10,6 +10,13 @@ services:
       POSTGRES_USER: ${POSTGRES_USER}
       POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
 
+  dynamodb:
+    image: amazon/dynamodb-local
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./dynamodb:/home/dynamodblocal/data
+
   auth_service:
     build:
       context: .
@@ -18,19 +25,6 @@ services:
       - "8001:8001"
     volumes:
       - ./auth_service/src:/app/auth_service
-    environment:
-      DATABASE_URL: ${DATABASE_URL}
-    depends_on:
-      - db
-
-  profile_service:
-    build:
-      context: .
-      dockerfile: profile_service/Dockerfile
-    ports:
-      - "8002:8002"
-    volumes:
-      - ./profile_service/src:/app/profile_service
     environment:
       DATABASE_URL: ${DATABASE_URL}
     depends_on:
