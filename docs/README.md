@@ -18,9 +18,11 @@ Social Media Dashboard that allows users to link multiple social media accounts 
 
 ### Components:
 
-1. Backend Microservices
-	- User Service: Handles user registration, authentication, and social media account linking.
-	- Analytics Service: Pulls data from social media APIs (Twitter, Instagram, Facebook, etc.) and generates insights and statistics.
+1. Backend Microservices  
+	[How to setup a new microservice](./architecture/How-to-setup-a-new-microservice.md)
+	- Auth Service: Handles user registration, authentication.
+    - Profile Service: Handles user profile information and social media account information.
+	- TODO Analytics Service: Pulls data from social media APIs (Twitter, Instagram, Facebook, etc.) and generates insights and statistics.
 2. Frontend
 	- ReactJS Dashboard: A user interface built in ReactJS for interacting with the backend services. Provides the UI for linking social media accounts and displaying insights.
 
@@ -57,7 +59,10 @@ Social Media Dashboard that allows users to link multiple social media accounts 
 
 - Diagrams as Code: Mermaid
 
+### Code Review:
+
+- GitHub
+
 ### Optional:
 
 - End-to-end Testing: Cypress
-- Code Review: GitHub
