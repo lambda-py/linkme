@@ -15,7 +15,8 @@ Resources:
   GetProfileFunction:
     Type: AWS::Serverless::Function
     Properties:
-      Handler: create_profile.handler
+      CodeUri: lambda_handlers/
+      Handler: get_profile.handler
       Runtime: python3.9
       Events:
         GetProfile:
