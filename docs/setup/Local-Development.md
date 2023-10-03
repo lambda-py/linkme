@@ -1,6 +1,8 @@
 # Local Development Setup
 
-## Step-by-Step Setup:
+## Backend
+
+### Step-by-Step Setup:
 
 1. **Clone the Repository**:
 ```bash
@@ -19,19 +21,19 @@ cp .env.example .env
 3. **Docker Compose Build**:
 
 ```
-docker-compose build
+docker compose build
 ```
 
 4. **Running Services**:
 
 ```
-docker-compose up -d
+docker compose up -d
 ```
 
 * For a specific service:
 
 ```
-docker-compose up auth_service
+docker compose up auth_service
 ```
 
 5. **Accessing the Services**:
@@ -43,7 +45,7 @@ docker-compose up auth_service
 6. **Stopping Services**:
 
 ```
-docker-compose down
+docker compose down
 ```
 
 7. **Running Tests**:
@@ -78,4 +80,26 @@ make precommit
 
 ```
 make autofmt
+```
+
+## Frontend
+
+### Step-by-Step Setup:
+
+1. **Clone the Repository**:
+```bash
+git clone https://github.com/acman/linkme.git
+cd linkme
+```
+
+2. **Build the Frontend**:
+
+```bash
+docker compose build frontend
+```
+
+3. **Running the Frontend**:
+
+```bash
+docker compose up frontend
 ```
