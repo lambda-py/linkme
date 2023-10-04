@@ -18,6 +18,7 @@ Resources:
       CodeUri: lambda_handlers/
       Handler: get_profile.handler
       Runtime: python3.9
+      Timeout: 10
       Events:
         GetProfile:
           Type: Api
@@ -56,6 +57,7 @@ Resources:
       CodeUri: lambda_handlers/
       Handler: create_profile.handler
       Runtime: python3.9
+      Timeout: 10
       Events:
         CreateProfile:
           Type: Api
@@ -92,6 +94,7 @@ Resources:
       CodeUri: lambda_handlers/
       Handler: update_profile.handler
       Runtime: python3.9
+      Timeout: 10
       Events:
         UpdateProfile:
           Type: Api
@@ -128,6 +131,7 @@ Resources:
       CodeUri: lambda_handlers/
       Handler: delete_profile.handler
       Runtime: python3.9
+      Timeout: 10
       Events:
         DeleteProfile:
           Type: Api
