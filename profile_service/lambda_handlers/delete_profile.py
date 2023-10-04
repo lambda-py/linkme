@@ -1,9 +1,7 @@
 import json
 
-from . import get_logger, get_table
-
-table = get_table()
-logger = get_logger()
+from utils.db import table
+from utils.logger import logger
 
 
 def handler(event, context):

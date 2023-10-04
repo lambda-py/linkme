@@ -1,10 +1,8 @@
 import json
 
-from . import get_logger, get_table
-from .schemas.user_social_profile import UserSocialProfile
-
-table = get_table()
-logger = get_logger()
+from schemas.user_social_profile import UserSocialProfile
+from utils.db import table
+from utils.logger import logger
 
 
 def handler(event, context):

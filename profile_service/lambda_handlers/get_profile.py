@@ -1,12 +1,11 @@
 import json
 
-from . import get_logger, get_table
-
-table = get_table()
-logger = get_logger()
+from utils.db import table
+from utils.logger import logger
 
 
 def handler(event, context):
+    logger.info("ASDASDASDADSD")
     logger.info("Received event: %s", json.dumps(event))
     user_id = event.get("pathParameters", {}).get("user_id")
     if not user_id:
