@@ -5,7 +5,6 @@ from utils.logger import logger
 
 
 def handler(event, context):
-    logger.info("ASDASDASDADSD")
     logger.info("Received event: %s", json.dumps(event))
     user_id = event.get("pathParameters", {}).get("user_id")
     if not user_id:
