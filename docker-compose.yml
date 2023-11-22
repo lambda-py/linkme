@@ -37,7 +37,7 @@ services:
     ports:
       - "3000:3000"
     volumes:
-      - ./web_client:/app
+      - ./web_client/src:/app/src
     environment:
       REACT_APP_AUTH_SERVICE_URL: ${REACT_APP_AUTH_SERVICE_URL}
       REACT_APP_PROFILE_SERVICE_URL: ${REACT_APP_PROFILE_SERVICE_URL}
