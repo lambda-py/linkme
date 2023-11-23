@@ -53,7 +53,11 @@ function App() {
           <div className="absolute w-[1381px] h-[581px] top-0 left-0">
             <div className="relative w-[962px] h-[583px] top-0 left-[209px]">
               <div className="flex justify-center items-start h-screen">
-                  <img className="max-w-full h-auto max-h-[581px]" alt="Profile" src={artistData.img ? artistData.img : defaultProfileImage} />
+                  <img 
+                    className="max-w-full h-auto max-h-[581px]" 
+                    alt="Profile" 
+                    src={artistData.img ? artistData.img : defaultProfileImage} 
+                  />
               </div>
               <div className="absolute w-[126px] h-[63px] top-3 left-[183px] [text-shadow:0px_0px_5px_#000000]  [font-family:'Outfit-ExtraBold',Helvetica] font-extrabold text-white text-[30px] text-center tracking-[0] leading-[normal]">
                 LinkMe

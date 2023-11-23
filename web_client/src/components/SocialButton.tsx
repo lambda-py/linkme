@@ -35,6 +35,9 @@ const socialComponentMap: SocialComponentType = {
 
 const SocialButton = ({platform, url, color}: Props) => {
   const PlatformIcon = socialComponentMap[platform]
+  function capitalizeFirstLetter(string: string) {
+    return string.charAt(0).toUpperCase() + string.slice(1);
+  }
 
   return (
     <button 
@@ -43,7 +46,7 @@ const SocialButton = ({platform, url, color}: Props) => {
     >
       {PlatformIcon && <PlatformIcon color={color} className="w-12 h-12" />}
       <span className="ml-4 text-black">
-        {platform}
+        {capitalizeFirstLetter(platform)}
       </span>
     </button>
   )
