@@ -1,6 +1,7 @@
 import { PlatformInstagramColorNegative } from "../icons/PlatformInstagramColorNegative"
 import { PlatformYoutubeColorNegative } from "../icons/PlatformYoutubeColorNegative"
 import { PlatformFacebookColorNegative } from "../icons/PlatformFacebookColorNegative"
+import { SocialComponentType } from "../shared/types"
 
 
 type Props = {
@@ -9,7 +10,7 @@ type Props = {
   color: string;
 }
 
-const socialComponentMap = {
+const socialComponentMap: SocialComponentType = {
   instagram: PlatformInstagramColorNegative,
   youtube: PlatformYoutubeColorNegative,
   facebook: PlatformFacebookColorNegative,
