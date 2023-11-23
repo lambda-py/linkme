@@ -1,6 +1,7 @@
 import defaultProfileImage from "../assets/default-profile.png";
 import SocialButtonList from "../components/SocialButtonList";
 import {artistData} from "../constants/testData"
+import Logo from "../components/Logo"
 
 const Profile = () => {
   return (
@@ -16,8 +17,8 @@ const Profile = () => {
                     src={artistData.img ? artistData.img : defaultProfileImage} 
                   />
               </div>
-              <div className="absolute w-[126px] h-[63px] top-3 left-[183px] [text-shadow:0px_0px_5px_#000000]  [font-family:'Outfit-ExtraBold',Helvetica] font-extrabold text-white text-[30px] text-center tracking-[0] leading-[normal]">
-                LinkMe
+              <div className="absolute w-[126px] h-[63px] top-3 left-[183px] ">
+                <Logo />
               </div>
               <a className="absolute w-[124px] h-[63px] top-3 left-[652px] [text-shadow:0px_0px_2px_#000000]  font-regular font-[number:var(--regular-font-weight)] text-white text-[length:var(--regular-font-size)] text-center tracking-[var(--regular-letter-spacing)] leading-[var(--regular-line-height)] [font-style:var(--regular-font-style)]">
                 login
