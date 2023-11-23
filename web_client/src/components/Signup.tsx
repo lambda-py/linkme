@@ -2,16 +2,7 @@ import { useState } from 'react';
 import { signupFields } from "../constants/formFields"
 import FormAction from "./FormAction";
 import Input from "./Input";
-
-type fieldsType={
-  id:string;
-  labelText:string;
-  labelFor:string;
-  name:string;
-  type:string;
-  isRequired?:boolean;
-  placeholder?:string;
-}[]
+import { fieldsType } from '../shared/types';
 
 type fieldsStateType={
   [key:string]:string;

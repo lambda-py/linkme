@@ -3,16 +3,7 @@ import { loginFields } from "../constants/formFields";
 import Input from "./Input";
 import FormExtra from "./FormExtra";
 import FormAction from "./FormAction";
-
-type fieldsType = {
-  id: string;
-  labelText: string;
-  labelFor: string;
-  name: string;
-  type: string;
-  isRequired?: boolean;
-  placeholder?: string;
-}[]
+import { fieldsType } from '../shared/types';
 
 type fieldsStateType = {
   [key: string]: string;
