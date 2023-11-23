@@ -4,7 +4,7 @@ import artistData from "./data/artistData"
 
 type Props = {}
 
-const profile = (props: Props) => {
+const Profile = (props: Props) => {
   return (
     <div className="bg-white flex flex-row justify-center w-full">
       <div className="bg-white w-[1440px] h-[1080px]">
@@ -42,4 +42,4 @@ const profile = (props: Props) => {
   )
 }
 
-export default profile
+export default Profile
