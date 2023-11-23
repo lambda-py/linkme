@@ -1,6 +1,22 @@
 import { PlatformInstagramColorNegative } from "./icons/PlatformInstagramColorNegative";
 import { PlatformYoutubeColorNegative } from "./icons/PlatformYoutubeColorNegative";
-import artistPicture from "./assets/IMG_1503.jpg"
+import defaultProfileImage from "./assets/default-profile.png"
+import SocialButtonList from "./components/SocialButtonList";
+
+const artistData = {
+  color: '#000000',
+  name: 'Artist Name',
+  socials: [
+    {
+      platform: 'instagram',
+      url: 'https://www.instagram.com/artistname'
+    },
+    {
+      platform: 'youtube',
+      url: 'https://www.youtube.com/artistname'
+    },
+  ]
+}
 
 function App() {
   return (
@@ -8,8 +24,10 @@ function App() {
       <div className="bg-white w-[1440px] h-[1080px]">
         <div className="relative w-[1381px] h-[943px] top-0 left-[31px]">
           <div className="absolute w-[1381px] h-[581px] top-0 left-0">
-            <div className="relative w-[962px] h-[583px] top-[-2px] left-[209px]">
-              <img className="w-[962px] h-[581px] top-0 left-0" alt="" src={artistPicture} />
+            <div className="relative w-[962px] h-[583px] top-0 left-[209px]">
+              <div className="flex justify-center items-center h-screen">
+                  <img className="max-w-full h-auto max-h-[581px]" alt="Profile" src={defaultProfileImage} />
+              </div>
               <div className="absolute w-[126px] h-[63px] top-3 left-[183px] [text-shadow:0px_0px_2px_#000000] [-webkit-text-stroke:1px_#000000] [font-family:'Outfit-ExtraBold',Helvetica] font-extrabold text-white text-[30px] text-center tracking-[0] leading-[normal]">
                 LinkMe
               </div>
@@ -20,22 +38,9 @@ function App() {
           </div>
           <div className="absolute w-[369px] h-[491px] top-[452px] left-[505px]">
             <div className="w-[368px] h-[70px] pt-7 [text-shadow:0px_0px_2px_#000000] [-webkit-text-stroke:1px_#000000] font-logo font-[number:var(--logo-font-weight)] text-white text-[length:var(--logo-font-size)] text-center tracking-[var(--logo-letter-spacing)] leading-[var(--logo-line-height)] [font-style:var(--logo-font-style)]">
-              Dvi Kuli Mad
+              {artistData.name}
             </div>
-            <div className="w-full mt-6 px-4">
-              <button className="w-full h-16 mb-3 flex items-center justify-start bg-white rounded-lg shadow-[0px_0px_8px_#00000080] px-6">
-                <PlatformInstagramColorNegative color="black" className="w-12 h-12" />
-                <span className="ml-4 text-black">
-                  Instagram
-                </span>
-              </button>
-              <button className="w-full h-16 mb-3 flex items-center justify-start bg-white rounded-lg shadow-[0px_0px_8px_#00000080] px-6">
-                <PlatformYoutubeColorNegative color="black" className="w-12 h-12" />
-                <span className="ml-4 text-black">
-                  Youtube
-                </span>
-              </button>
-            </div>
+            {/* <SocialButtonList socials={artistData.socials} color= /> */}
           </div>
         </div>
       </div>
