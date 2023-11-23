@@ -1,0 +1,1 @@
+export { PlatformSnapchatColorOriginal } from "./PlatformSnapchatColorOriginal";

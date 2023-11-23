@@ -1,0 +1,1 @@
+export { PlatformFigmaColorNegative } from "./PlatformFigmaColorNegative";

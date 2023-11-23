@@ -1,0 +1,1 @@
+export { PlatformFacebookColorNegative } from "./PlatformFacebookColorNegative";

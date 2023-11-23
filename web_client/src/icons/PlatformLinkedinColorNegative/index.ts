@@ -1,0 +1,1 @@
+export { PlatformLinkedinColorNegative } from "./PlatformLinkedinColorNegative";

@@ -1,0 +1,1 @@
+export { PlatformTelegramColorOriginal } from "./PlatformTelegramColorOriginal";

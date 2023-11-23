@@ -1,0 +1,1 @@
+export { PlatformLinkedinColorOriginal } from "./PlatformLinkedinColorOriginal";

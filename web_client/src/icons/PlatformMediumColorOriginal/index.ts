@@ -1,0 +1,1 @@
+export { PlatformMediumColorOriginal } from "./PlatformMediumColorOriginal";

@@ -1,0 +1,1 @@
+export { PlatformGoogleColorNegative } from "./PlatformGoogleColorNegative";

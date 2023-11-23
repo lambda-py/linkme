@@ -1,0 +1,1 @@
+export { PlatformFacebookColorOriginal } from "./PlatformFacebookColorOriginal";

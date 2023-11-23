@@ -1,0 +1,1 @@
+export { PlatformXTwitterColorNegative } from "./PlatformXTwitterColorNegative";
