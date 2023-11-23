@@ -9,7 +9,7 @@ export default function LoginPage() {
         linkName="Signup"
         linkUrl="/signup"
         />
-        
+      
     </>
   )
 }
