@@ -1,6 +1,6 @@
 import defaultProfileImage from "../assets/default-profile.png";
 import SocialButtonList from "../components/SocialButtonList";
-import artistData from "../constants/testData";
+import {artistData} from "../constants/testData"
 
 const Profile = () => {
   return (
