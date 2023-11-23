@@ -1,10 +1,8 @@
-import defaultProfileImage from "./assets/default-profile.png"
-import SocialButtonList from "./components/SocialButtonList";
-import artistData from "./data/artistData"
+import defaultProfileImage from "../assets/default-profile.png";
+import SocialButtonList from "../components/SocialButtonList";
+import artistData from "../constants/testData";
 
-type Props = {}
-
-const Profile = (props: Props) => {
+const Profile = () => {
   return (
     <div className="bg-white flex flex-row justify-center w-full">
       <div className="bg-white w-[1440px] h-[1080px]">
