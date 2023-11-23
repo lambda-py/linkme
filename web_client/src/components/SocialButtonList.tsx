@@ -11,8 +11,8 @@ type Props = {
 function SocialButtonList({socials, color}: Props) {
   return (
     <div className="w-full my-6 px-4">
-      {socials.map(social => (
-        <SocialButton platform={social.platform} url={social.url} color={color}/>
+      {socials.map((social, index) => (
+        <SocialButton key={index} platform={social.platform} url={social.url} color={color}/>
       ))}
     </div>
   )
