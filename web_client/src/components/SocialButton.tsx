@@ -1,6 +1,14 @@
+import { PlatformDiscordColorNegative } from "../icons/PlatformDiscordColorNegative"
+import { PlatformFacebookColorNegative } from "../icons/PlatformFacebookColorNegative"
+import { PlatformTwitchColorNegative } from "../icons/PlatformTwitchColorNegative"
+import { PlatformTiktokColorNegative } from "../icons/PlatformTiktokColorNegative"
+import { PlatformGoogleColorNegative } from "../icons/PlatformGoogleColorNegative"
 import { PlatformInstagramColorNegative } from "../icons/PlatformInstagramColorNegative"
 import { PlatformYoutubeColorNegative } from "../icons/PlatformYoutubeColorNegative"
-import { PlatformFacebookColorNegative } from "../icons/PlatformFacebookColorNegative"
+import { PlatformXColorNegative } from "../icons/PlatformXColorNegative"
+import { PlatformGithubColorNegative } from "../icons/PlatformGithubColorNegative"
+import { PlatformLinkedinColorNegative } from "../icons/PlatformLinkedinColorNegative"
+import { PlatformTelegramColorNegative } from "../icons/PlatformTelegramColorNegative"
 import { SocialComponentType } from "../shared/types"
 
 
@@ -14,6 +22,14 @@ const socialComponentMap: SocialComponentType = {
   instagram: PlatformInstagramColorNegative,
   youtube: PlatformYoutubeColorNegative,
   facebook: PlatformFacebookColorNegative,
+  discord: PlatformDiscordColorNegative,
+  twitch: PlatformTwitchColorNegative,
+  tiktok: PlatformTiktokColorNegative,
+  google: PlatformGoogleColorNegative,
+  x: PlatformXColorNegative,
+  github: PlatformGithubColorNegative,
+  linkedin: PlatformLinkedinColorNegative,
+  telegram: PlatformTelegramColorNegative,
 }
 
 
