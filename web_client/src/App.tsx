@@ -1,11 +1,10 @@
-import { PlatformInstagramColorNegative } from "./icons/PlatformInstagramColorNegative";
-import { PlatformYoutubeColorNegative } from "./icons/PlatformYoutubeColorNegative";
 import defaultProfileImage from "./assets/default-profile.png"
 import SocialButtonList from "./components/SocialButtonList";
 
 const artistData = {
   color: '#000000',
   name: 'Artist Name',
+  img: '',
   socials: [
     {
       platform: 'instagram',
@@ -26,7 +25,7 @@ function App() {
           <div className="absolute w-[1381px] h-[581px] top-0 left-0">
             <div className="relative w-[962px] h-[583px] top-0 left-[209px]">
               <div className="flex justify-center items-center h-screen">
-                  <img className="max-w-full h-auto max-h-[581px]" alt="Profile" src={defaultProfileImage} />
+                  <img className="max-w-full h-auto max-h-[581px]" alt="Profile" src={artistData.img ? artistData.img : defaultProfileImage} />
               </div>
               <div className="absolute w-[126px] h-[63px] top-3 left-[183px] [text-shadow:0px_0px_2px_#000000] [-webkit-text-stroke:1px_#000000] [font-family:'Outfit-ExtraBold',Helvetica] font-extrabold text-white text-[30px] text-center tracking-[0] leading-[normal]">
                 LinkMe
@@ -40,7 +39,7 @@ function App() {
             <div className="w-[368px] h-[70px] pt-7 [text-shadow:0px_0px_2px_#000000] [-webkit-text-stroke:1px_#000000] font-logo font-[number:var(--logo-font-weight)] text-white text-[length:var(--logo-font-size)] text-center tracking-[var(--logo-letter-spacing)] leading-[var(--logo-line-height)] [font-style:var(--logo-font-style)]">
               {artistData.name}
             </div>
-            {/* <SocialButtonList socials={artistData.socials} color= /> */}
+            <SocialButtonList socials={artistData.socials} color={artistData.color} />
           </div>
         </div>
       </div>
