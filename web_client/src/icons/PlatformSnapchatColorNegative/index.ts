@@ -1,1 +1,0 @@
-export { PlatformSnapchatColorNegative } from "./PlatformSnapchatColorNegative";

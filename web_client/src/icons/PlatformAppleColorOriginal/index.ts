@@ -1,1 +1,0 @@
-export { PlatformAppleColorOriginal } from "./PlatformAppleColorOriginal";

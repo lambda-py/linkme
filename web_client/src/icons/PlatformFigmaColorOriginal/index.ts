@@ -1,1 +1,0 @@
-export { PlatformFigmaColorOriginal } from "./PlatformFigmaColorOriginal";

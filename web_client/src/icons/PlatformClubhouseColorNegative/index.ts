@@ -1,1 +1,0 @@
-export { PlatformClubhouseColorNegative } from "./PlatformClubhouseColorNegative";

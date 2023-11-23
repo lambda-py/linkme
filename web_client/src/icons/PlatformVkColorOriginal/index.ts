@@ -1,1 +1,0 @@
-export { PlatformVkColorOriginal } from "./PlatformVkColorOriginal";

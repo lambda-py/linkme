@@ -1,1 +1,0 @@
-export { PlatformSignalColorNegative } from "./PlatformSignalColorNegative";

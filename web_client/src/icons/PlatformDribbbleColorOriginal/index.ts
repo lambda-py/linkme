@@ -1,1 +1,0 @@
-export { PlatformDribbbleColorOriginal } from "./PlatformDribbbleColorOriginal";
