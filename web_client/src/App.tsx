@@ -36,7 +36,7 @@ function App() {
             <div className="absolute w-[369px] h-[70px] top-[175px] left-0">
               <button className="w-[371px] h-[70px] all-[unset] box-border">
                 <div className="relative w-[369px] h-[70px] bg-white rounded-[10px] shadow-[0px_0px_10px_#00000080]">
-                  <PlatformYoutubeColorNegative className="!w-[48px] !top-[12px] !left-[30px] !absolute !h-[48px]" />
+                  <PlatformYoutubeColorNegative color="black" className="!w-[48px] !top-[12px] !left-[30px] !absolute !h-[48px]" />
                   <div className="absolute h-[23px] top-[23px] left-[91px] font-regular font-[number:var(--regular-font-weight)] text-black text-[length:var(--regular-font-size)] tracking-[var(--regular-letter-spacing)] leading-[var(--regular-line-height)] [font-style:var(--regular-font-style)]">
                     Yotube Music
                   </div>
