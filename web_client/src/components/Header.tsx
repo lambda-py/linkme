@@ -12,7 +12,9 @@ const Header = ({heading, paragraph, linkName, linkUrl}: Props) => {
     return(
       <div className="mb-10">
           <div className="flex justify-center">
-            <Logo />
+            <Link to="/">
+              <Logo />
+            </Link>
           </div>
           <h2 className="mt-6 text-center text-lg font-extrabold text-gray-900">
               {heading}
