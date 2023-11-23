@@ -1,1 +1,0 @@
-export { PlatformInstagramColorNegative } from "./PlatformInstagramColorNegative";

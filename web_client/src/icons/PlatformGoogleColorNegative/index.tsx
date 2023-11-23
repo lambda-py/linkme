@@ -1,15 +1,9 @@
-/*
-We're constantly improving the code you see. 
-Please share your feedback here: https://form.asana.com/?k=uvp-HPgd3_hyoXRBw1IcNg&d=1152665201300829
-*/
-
-import React from "react";
-
 interface Props {
-  className: any;
+  className: string;
+  color: string;
 }
 
-export const PlatformGoogleColorNegative = ({ className }: Props): JSX.Element => {
+export const PlatformGoogleColorNegative = ({ className, color }: Props): JSX.Element => {
   return (
     <svg
       className={`${className}`}
@@ -39,7 +33,7 @@ export const PlatformGoogleColorNegative = ({ className }: Props): JSX.Element =
       </g>
       <defs>
         <clipPath id="clip0_12_86">
-          <rect fill="white" height="48" width="48" />
+          <rect fill={color} height="48" width="48" />
         </clipPath>
       </defs>
     </svg>

@@ -1,16 +1,9 @@
-/*
-We're constantly improving the code you see. 
-Please share your feedback here: https://form.asana.com/?k=uvp-HPgd3_hyoXRBw1IcNg&d=1152665201300829
-*/
-
-import React from "react";
-
 interface Props {
   color: string;
-  className: any;
+  className: string;
 }
 
-export const PlatformGithubColorNegative = ({ color = "white", className }: Props): JSX.Element => {
+export const PlatformGithubColorNegative = ({ color, className }: Props): JSX.Element => {
   return (
     <svg
       className={`${className}`}
@@ -30,7 +23,7 @@ export const PlatformGithubColorNegative = ({ color = "white", className }: Prop
       </g>
       <defs>
         <clipPath id="clip0_12_154">
-          <rect fill="white" height="48" width="48" />
+          <rect fill={color} height="48" width="48" />
         </clipPath>
       </defs>
     </svg>

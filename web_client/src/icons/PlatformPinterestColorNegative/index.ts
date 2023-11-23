@@ -1,1 +1,0 @@
-export { PlatformPinterestColorNegative } from "./PlatformPinterestColorNegative";

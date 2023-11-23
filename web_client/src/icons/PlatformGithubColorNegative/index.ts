@@ -1,1 +1,0 @@
-export { PlatformGithubColorNegative } from "./PlatformGithubColorNegative";

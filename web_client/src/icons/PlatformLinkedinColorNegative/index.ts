@@ -1,1 +1,0 @@
-export { PlatformLinkedinColorNegative } from "./PlatformLinkedinColorNegative";
