@@ -52,7 +52,7 @@ function App() {
         <div className="relative w-[1381px] h-[943px] top-0 left-[31px]">
           <div className="absolute w-[1381px] h-[581px] top-0 left-0">
             <div className="relative w-[962px] h-[583px] top-0 left-[209px]">
-              <div className="flex justify-center items-center h-screen">
+              <div className="flex justify-center items-start h-screen">
                   <img className="max-w-full h-auto max-h-[581px]" alt="Profile" src={artistData.img ? artistData.img : defaultProfileImage} />
               </div>
               <div className="absolute w-[126px] h-[63px] top-3 left-[183px] [text-shadow:0px_0px_2px_#000000] [-webkit-text-stroke:1px_#000000] [font-family:'Outfit-ExtraBold',Helvetica] font-extrabold text-white text-[30px] text-center tracking-[0] leading-[normal]">
@@ -68,6 +68,10 @@ function App() {
               {artistData.name}
             </div>
             <SocialButtonList socials={artistData.socials} color={artistData.color} />
+            <div className="flex justify-center">
+              Powered by&nbsp;
+              <a href="https://linkme.dev" target="_blank" rel="noreferrer" className="text-[#000000]">LinkMe</a>
+            </div>
           </div>
         </div>
       </div>

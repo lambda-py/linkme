@@ -38,7 +38,7 @@ const SocialButton = ({platform, url, color}: Props) => {
 
   return (
     <button 
-      className="w-full h-16 mb-3 flex items-center justify-start bg-white rounded-lg shadow-[0px_0px_8px_#00000080] px-6"
+      className="w-full h-16 mb-3 flex items-center justify-start bg-white rounded-lg shadow-[0px_0px_3px_#00000080] px-6 hover:bg-gray-100"
       onClick={() => window.open(url, '_blank')}
     >
       {PlatformIcon && <PlatformIcon color={color} className="w-12 h-12" />}
